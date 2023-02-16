@@ -1,6 +1,8 @@
 <?php
 function tabel($maxNumber)
 {
+    echo "<table>";
+    echo "<tr>";
     for ($i = 1; $i <= $maxNumber; $i++) {
 
         if ($i % 8 == 1) {
@@ -14,15 +16,8 @@ function tabel($maxNumber)
             echo "<td style='background:black;color:white;'>" . $i . "</td>";
         }
     }
+
+    echo "</table>";
 }
 
-?>
-
-<table>
-    <tr>
-        <?php
-
-        tabel(64);
-
-        ?>
-</table>
+tabel(64);

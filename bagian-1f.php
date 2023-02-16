@@ -1,30 +1,4 @@
 <?php
-// $arr = [
-//     ['f', 'g', 'h', '1'],
-//     ['j', 'k', 'p', 'q'],
-//     ['r', 's', 't', 'u'],
-// ];
-
-// // var_dump($arr[0]);
-// // echo "<br>";
-// // var_dump($arr[1]);
-
-// function cari($arr, $word)
-// {
-//     $letter = str_split($word);
-//     for ($i = 0; $i < count($arr); $i++) {
-//         for ($j = 0; $j < count($arr[$i]); $j++) {
-//             if ($letter[$j] == $arr[$i][$j]) {
-//                 echo $arr[$i][$j] . "<br>";
-//             }
-//         }
-//         echo "<br> <br>";
-//     }
-// }
-
-// cari($arr, 'fghi');
-
-
 $arr = [
     ['f', 'g', 'h', 'i'],
     ['j', 'k', 'p', 'q'],
@@ -75,12 +49,19 @@ function is_sibling(array $current, array $next)
     return false;
 }
 
-$res[0] = cari($arr, 'fghi');
-$res[1] = cari($arr, 'fghp');
-$res[2] = cari($arr, 'fjrstp');
-$res[3] = cari($arr, 'fghq');
-$res[4] = cari($arr, 'fst');
-$res[5] = cari($arr, 'pqr');
-$res[6] = cari($arr, 'fghh');
+function outputText($param)
+{
+    if ($param) {
+        echo 'true <br>';
+    } else {
+        echo 'false <br>';
+    }
+}
 
-var_dump($res);
+outputText(cari($arr, 'fghi'));
+outputText(cari($arr, 'fghp'));
+outputText(cari($arr, 'fjrstp'));
+outputText(cari($arr, 'fghq'));
+outputText(cari($arr, 'fst'));
+outputText(cari($arr, 'pqr'));
+outputText(cari($arr, 'fghh'));
